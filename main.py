@@ -2,7 +2,11 @@
 
 # IMPORTS AND INITS
 from login import login
+from menu import menu
 import json
+
+# MENU OPTIONS
+menu_options = ["Borrow a book", "Renew a Book", "Return a Book", "View Account Details"]
 
 # LOAD DATABASE.JSON INTO PYTHON
 with open("database.json") as db:
@@ -19,5 +23,7 @@ loans_dict = data.pop("loans", {})
 member_id = input("Member ID: ")
 password = input("Password: ")
 member_details = login(member_id, password, members_dict)
+print(member_details)
 
-
+# PROGRAM LOOP HERE
+menu(library_name, member_details, menu_options)
