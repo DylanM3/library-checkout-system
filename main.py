@@ -15,8 +15,9 @@ books_dict = data.pop("books", {})
 members_dict = data.pop("members", {})
 loans_dict = data.pop("loans", {})
 
-        
+# HANDLE USER LOGIN - STORE USER INFO
 member_id = input("Member ID: ")
 password = input("Password: ")
-
 member_details = login(member_id, password)
+
+
