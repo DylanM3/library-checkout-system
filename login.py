@@ -28,7 +28,6 @@ def login(member_id, password, members_dict):
 
     # Check if a member was found
     if member_details:
-        print(f"Welcome, {member_details["name"]}.")
         return member_details
     else:
         print("Login Failed.\nPlease re-run the program and try again.")

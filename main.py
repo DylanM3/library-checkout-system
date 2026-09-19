@@ -3,6 +3,7 @@
 # IMPORTS AND INITS
 from login import login
 from menu import menu
+from helper import *
 import json
 
 # MENU OPTIONS
@@ -23,7 +24,8 @@ loans_dict = data.pop("loans", {})
 member_id = input("Member ID: ")
 password = input("Password: ")
 member_details = login(member_id, password, members_dict)
-print(member_details)
+
+clear_screen()
 
 # PROGRAM LOOP HERE
 menu(library_name, member_details, menu_options)
