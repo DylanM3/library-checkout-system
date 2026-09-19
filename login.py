@@ -1,6 +1,6 @@
 # SIGN IN FUNCTION
 # Loops over every member with O(n) complexity until ID matched or it returns failure
-def login(member_id, password):
+def login(member_id, password, members_dict):
 
     # Initialise variable
     member_details = None

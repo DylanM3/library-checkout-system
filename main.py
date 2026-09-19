@@ -18,6 +18,6 @@ loans_dict = data.pop("loans", {})
 # HANDLE USER LOGIN - STORE USER INFO
 member_id = input("Member ID: ")
 password = input("Password: ")
-member_details = login(member_id, password)
+member_details = login(member_id, password, members_dict)
 
 
