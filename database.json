@@ -35,14 +35,12 @@
             "member_id" : "M001",
             "name" : "Alice Smith",
             "password" : "alicesPassword",
-            "email" : "alice@email.com",
             "membership_date" : "2024-01-15"
         },
         {
             "member_id" : "M002",
             "name" : "Bob Jones",
             "password" : "bobsPassword",
-            "email" : "bob@email.com",
             "membership_date" : "2025-06-20"
         }
     ],
