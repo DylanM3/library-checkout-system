@@ -1,35 +1,13 @@
 # SIGN IN FUNCTION
 # Loops over every member with O(n) complexity until ID matched or it returns failure
-def login(member_id, password, members_dict):
+def login(member_id, password, members):
 
-    # Initialise variable
-    member_details = None
+    for member in members:
 
-    for member in members_dict:
+        if member["member_id"] == member_id and member["password"] == password:
+            return member
 
-        # Grab the correct login info from the dictionarys
-        system_member_id = member["member_id"]
-        system_password = member["password"]
+    print("Login failed - please try again.")
+    input("Press ENTER to continue.")
 
-        # Compare the information to the correct information
-        if member_id == system_member_id:
-            member_id_approved = True
-        else:
-            member_id_approved = False
-
-        if password == system_password:
-            password_approved = True
-        else:
-            password_approved = False
-
-        # Check if ALL the information is correct
-        if member_id_approved and password_approved:
-            member_details = member
-
-    # Check if a member was found
-    if member_details != None:
-        return member_details
-    else:
-        print("Login failed - please try again.")
-        input("Press ENTER to continue.")
-        return False
+    return False
