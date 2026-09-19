@@ -1,0 +1,57 @@
+{
+    "library_name" : "Exeter Library",
+    "books" : [
+    {
+        "book_id" : "B001",
+        "title" : "Stormbreaker",
+        "author" : "Anthony Horowitz",
+        "total_copies" : 4,
+        "available_copies" : 3
+    },
+    {
+        "book_id" : "B001",
+        "title" : "Point Blanc",
+        "author" : "Anthony Horowitz",
+        "total_copies" : 3,
+        "available_copies" : 1
+    },
+    {
+        "book_id" : "B001",
+        "title" : "Skeleton Key",
+        "author" : "Anthony Horowitz",
+        "total_copies" : 3,
+        "available_copies" : 3
+    },
+    {
+        "book_id" : "B001",
+        "title" : "Eagle Strike",
+        "author" : "Anthony Horowitz",
+        "total_copies" : 2,
+        "available_copies" : 0
+    }
+    ],
+    "members": [
+        {
+            "member_id" : "M001",
+            "name" : "Alice Smith",
+            "email" : "alice@email.com",
+            "membership_date" : "2024-01-15"
+        },
+        {
+            "member_id" : "M002",
+            "name" : "Bob Jones",
+            "email" : "bob@email.com",
+            "membership_date" : "2025-06-20"
+        }
+    ],
+    "loans" : [
+        {
+            "loan_id" : "L001",
+            "book_id" : "B002",
+            "member_id" : "M001",
+            "checkout_date" : "2026-09-10",
+            "due_date" : "2026-09-24",
+            "status" : "borrowed"
+        }
+    ]
+}
