@@ -9,21 +9,21 @@
         "available_copies" : 3
     },
     {
-        "book_id" : "B001",
+        "book_id" : "B002",
         "title" : "Point Blanc",
         "author" : "Anthony Horowitz",
         "total_copies" : 3,
         "available_copies" : 1
     },
     {
-        "book_id" : "B001",
+        "book_id" : "B003",
         "title" : "Skeleton Key",
         "author" : "Anthony Horowitz",
         "total_copies" : 3,
         "available_copies" : 3
     },
     {
-        "book_id" : "B001",
+        "book_id" : "B004",
         "title" : "Eagle Strike",
         "author" : "Anthony Horowitz",
         "total_copies" : 2,
