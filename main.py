@@ -6,12 +6,11 @@ from menu import menu
 from helper import *
 import json
 
-# MENU OPTIONS
+login_success = False
 menu_options = ["Borrow a book", "Renew a Book", "Return a Book", "View Account Details"]
 
 # LOAD DATABASE.JSON INTO PYTHON
 with open("database.json") as db:
-    global data
     data = json.load(db)
 
 # DECOMPILE THE NESTED JSON INTO MULTIPLE DICTS
@@ -20,12 +19,16 @@ books_dict = data.pop("books", {})
 members_dict = data.pop("members", {})
 loans_dict = data.pop("loans", {})
 
-# HANDLE USER LOGIN - STORE USER INFO
-member_id = input("Member ID: ")
-password = input("Password: ")
-member_details = login(member_id, password, members_dict)
+# REPEAT LOGIN UNTIL SUPPLIED WITH VALID DETAILS
+while login_success == False:
 
-clear_screen()
+    # HANDLE USER LOGIN - STORE USER INFO
+    member_id = input("Member ID: ")
+    password = input("Password: ")
+    member_details = login(member_id, password, members_dict)
 
-# PROGRAM LOOP HERE
-menu(library_name, member_details, menu_options)
+    clear_screen()
+
+    if member_details:
+        # PROGRAM LOOP HERE
+        menu(library_name, member_details, menu_options)

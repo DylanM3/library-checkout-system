@@ -27,7 +27,9 @@ def login(member_id, password, members_dict):
             member_details = member
 
     # Check if a member was found
-    if member_details:
+    if member_details != None:
         return member_details
     else:
-        print("Login Failed.\nPlease re-run the program and try again.")
+        print("Login failed - please try again.")
+        input("Press ENTER to continue.")
+        return False

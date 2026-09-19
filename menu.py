@@ -1,5 +1,6 @@
 # IMPORTS
 from helper import *
+from menu_functions import *
 
 def menu(library_name, member_details, menu_options):
 
@@ -19,17 +20,13 @@ def menu(library_name, member_details, menu_options):
 
         match choice:
             case '1':
-                #return borrow_book()
-                pass
+                return borrow_book()
             case '2':
-                #return renew_book()
-                pass
+                return renew_book()
             case '3':
-                #return return_book()
-                pass
+                return return_book()
             case '4':
-                #return membership_details()
-                pass
+                return membership_details()
             case _:
                 print("Please choose a valid selection (1 - 4)")
                 input("Press ENTER to continue.")
